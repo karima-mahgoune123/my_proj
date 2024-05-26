@@ -19,5 +19,10 @@ $(TARGET): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
+test:
+    # Ajoutez ici les commandes pour exécuter les tests/unités
+    # Par exemple :
+    ./TestProtocol.exe
+
 clean:
 	rm -f $(OBJ) $(TARGET)
