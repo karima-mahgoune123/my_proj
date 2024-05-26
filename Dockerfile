@@ -17,5 +17,5 @@ COPY SWC.c TestProtocol.c
 # Compiler les fichiers source pour le microcontrôleur
 RUN make
 
-# La commande par défaut peut être laissée vide ou utilisée pour lancer des tests/unités
-CMD ["/bin/bash"]
+# Exécuter les tests/unités
+RUN make test
