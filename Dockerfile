@@ -18,4 +18,4 @@ COPY SWC.c TestProtocol.c
 RUN make
 
 # Exécuter les tests/unités
-RUN make tests
+RUN make test
