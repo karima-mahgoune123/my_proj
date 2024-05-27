@@ -1,12 +1,15 @@
 # Utiliser une image de base appropriée
 FROM ubuntu:latest
 
+# Utiliser une image de base appropriée
+FROM ubuntu:latest
+
 # Installer les outils nécessaires
 RUN apt-get update && apt-get install -y \
-    gcc \                                  # Compilateur GCC standard
-    make \                                 # Outil de construction de projets
-    cmake \                                # Outil de gestion de compilation
-    libcunit1 libcunit1-doc libcunit1-dev  # Bibliothèque de test unitaire et ses fichiers de développement
+    gcc \
+    make \
+    cmake \
+    libcunit1 libcunit1-doc libcunit1-dev
 
 # Définir le répertoire de travail
 WORKDIR /Users/HP/my_proj
