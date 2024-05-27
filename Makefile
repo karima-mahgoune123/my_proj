@@ -1,8 +1,8 @@
-# Définir le compilateur croisé
-CC = arm-none-eabi-gcc
+# Définir le compilateur
+CC = gcc
 
 # Définir les options de compilation
-CFLAGS = -mcpu=cortex-m3 -mthumb -Wall -g
+CFLAGS = -Wall -g -I/usr/include
 
 # Définir les fichiers objets
 OBJ = SWC.o TestProtocol.o
@@ -14,15 +14,13 @@ TARGET = my_proj.bin
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -L/usr/lib -lcunit
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 test:
-    # Ajoutez ici les commandes pour exécuter les tests/unités
-    # Par exemple :
-    ./TestProtocol.exe
+	./my_proj.bin
 
 clean:
 	rm -f $(OBJ) $(TARGET)

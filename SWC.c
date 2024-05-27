@@ -161,5 +161,4 @@ if (Headlight_washer_switch_failure   == Present){
 
 
 return  Headlight_washer_cmd;
-
 }
